@@ -6,6 +6,7 @@ import { ModalProvider } from "@/providers/modal-provider";
 
 import "./globals.css";
 import { ToastProvider } from "@/providers/toast-provider";
+import { toast } from "react-toastify";
 
 const inter = Inter({ subsets: ["latin"] });
 
