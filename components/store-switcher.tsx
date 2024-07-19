@@ -73,7 +73,7 @@ export default function StoreSwitcher({
         >
           <StoreIcon className="mr-2 h-4 w-4" />
           {currentStore?.label}
-          <ChevronsUpDown className="w-4 h-4" />
+          <ChevronsUpDown className="ml-auto w-4 h-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
@@ -108,7 +108,7 @@ export default function StoreSwitcher({
             <CommandGroup>
               <CommandItem
                 onSelect={() => {
-                  setOpen(true);
+                  setOpen(false);
                   storeModel.onOpen();
                 }}
               >
