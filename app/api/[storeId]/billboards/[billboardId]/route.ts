@@ -10,10 +10,6 @@ export async function GET(
     try {
         const { userId } = auth();
 
-        if (!userId) {
-            return new NextResponse("Unauthenticated", { status: 401 });
-        }
-
         if (!params.storeId) {
             return new NextResponse("Store id is required", { status: 400 })
         }
@@ -25,7 +21,6 @@ export async function GET(
         const storeByUserId = await prismadb.store.findFirst({
             where: {
                 id: params.storeId,
-                userId
             }
         })
 
